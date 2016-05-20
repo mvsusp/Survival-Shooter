@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Awake ()
     {
-        player = GameObject.FindGameObjectWithTag ("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         //playerHealth = player.GetComponent <PlayerHealth> ();
         //enemyHealth = GetComponent <EnemyHealth> ();
         nav = GetComponent <NavMeshAgent> ();
@@ -20,9 +20,11 @@ public class EnemyMovement : MonoBehaviour
 
     void Update ()
     {
+        player = GameObject.FindWithTag("Player").transform;
+
         //if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         //{
-            nav.SetDestination (player.position);
+        nav.SetDestination (player.position);
         //}
         //else
         //{

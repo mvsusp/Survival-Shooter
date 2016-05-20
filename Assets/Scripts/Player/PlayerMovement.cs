@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(anim.GetBool("IsWalking"));
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
