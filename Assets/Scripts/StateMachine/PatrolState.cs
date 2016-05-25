@@ -13,7 +13,7 @@ public class PatrolState : IEnemyState {
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))s
         {
             ToAlertState();
         }
